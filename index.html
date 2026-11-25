@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bolos by Josina | Bolos por encomenda em Odivelas e Caneças</title>
+<meta name="description" content="Bolos by Josina: bolos por encomenda feitos à mão em Odivelas e Caneças, Grande Lisboa. Brigadeiros, bentô cakes e bolos de festa. Encomende pelo WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F7F4EE; --card:#FFFFFF; --band:#EFEAE1;
+  --vinho:#71182A; --vinho-dark:#121E36;
+  --ouro:#C8A97E; --terra:#8F6F69; --grafite:#2B2424;
+  --texto:#3A3232; --suave:#6E5F5C;
+  --linha:rgba(176,138,60,.45);
+  --radius:18px;
+  --shadow:0 18px 45px rgba(43,36,36,.10);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Manrope',sans-serif;background:var(--bg);color:var(--texto);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+h1,h2,h3,.serif{font-family:'Fraunces',serif;color:var(--grafite);font-weight:500}
+h1 em,h2 em{font-style:italic;color:var(--vinho)}
+.eyebrow{font-size:.72rem;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--ouro)}
+.btn-wa{display:inline-flex;align-items:center;gap:10px;background:var(--vinho);color:#fff;font-weight:700;font-size:.98rem;padding:15px 26px;border-radius:999px;transition:.25s;box-shadow:0 12px 28px rgba(27,42,74,.28)}
+.btn-wa:hover{background:var(--vinho-dark);transform:translateY(-2px)}
+.btn-wa svg{width:20px;height:20px;flex:none}
+.btn-wa.small{padding:10px 18px;font-size:.86rem}
+.microcopy{font-size:.82rem;color:var(--suave);margin-top:12px}
+/* HEADER */
+header{position:sticky;top:0;z-index:50;background:rgba(248,244,239,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(27,42,74,.10)}
+.header-in{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:16px}
+.logo{line-height:1.15}
+.logo .nome{font-family:'Fraunces',serif;font-size:1.28rem;font-weight:600;color:var(--grafite)}
+.logo .sub{font-size:.66rem;font-weight:800;letter-spacing:.24em;text-transform:uppercase;color:var(--ouro)}
+/* HERO */
+.hero{padding:56px 0 64px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:start}
+.hero h1{font-size:clamp(2.3rem,4.6vw,3.6rem);line-height:1.12;letter-spacing:-.01em;margin:18px 0 16px}
+.hero .subtitulo{font-size:1.13rem;font-weight:800;color:var(--grafite);margin-bottom:12px}
+.hero .leve{font-size:1.02rem;color:var(--suave);max-width:52ch;margin-bottom:28px}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.pill{font-size:.78rem;font-weight:700;color:var(--vinho);background:#fff;border:1px solid rgba(27,42,74,.22);padding:7px 13px;border-radius:999px}
+.pill b{color:var(--ouro);font-weight:800}
+/* FOTO / ARCO */
+.hero-foto{position:relative}
+.arco{border:3px solid var(--vinho);border-radius:999px 999px 22px 22px;padding:10px;background:#fff;box-shadow:var(--shadow)}
+.arco img{border-radius:999px 999px 14px 14px;width:100%;height:520px;object-fit:cover;object-position:top center}
+.cred-card{position:absolute;background:#fff;border-radius:14px;box-shadow:0 14px 34px rgba(43,36,36,.16);padding:12px 16px;display:flex;gap:11px;align-items:center;max-width:250px}
+.cred-card svg{width:26px;height:26px;flex:none;color:var(--ouro)}
+.cred-card .t{font-size:.8rem;font-weight:800;color:var(--grafite);line-height:1.3}
+.cred-card .s{font-size:.72rem;color:var(--suave);line-height:1.35}
+.cred-1{top:56px;left:-38px}
+.cred-2{bottom:118px;right:-30px}
+.painel{background:var(--vinho);color:#fff;border-radius:16px;padding:20px 24px;margin-top:16px;text-align:center}
+.painel .nome{font-family:'Fraunces',serif;font-size:1.35rem;font-weight:600}
+.painel .cargo{font-size:.72rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:#E9C87E;margin:3px 0 8px}
+.painel .frase{font-family:'Fraunces',serif;font-style:italic;font-size:1rem;color:#F6E8D8}
+/* SEÇÕES */
+section{padding:72px 0}
+.sec-head{max-width:720px;margin-bottom:42px}
+.sec-head h2{font-size:clamp(1.8rem,3.4vw,2.5rem);line-height:1.18;margin:14px 0 12px}
+.sec-head p{color:var(--suave);font-size:1rem}
+.dor{background:var(--band);border-top:1px solid var(--linha);border-bottom:1px solid var(--linha)}
+.dor-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.dor p{color:var(--texto);margin-bottom:14px}
+.dor .destaque{font-family:'Fraunces',serif;font-size:1.25rem;color:var(--vinho);line-height:1.45}
+/* SERVIÇOS */
+.serv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.serv{background:var(--card);border:1px solid rgba(27,42,74,.10);border-radius:var(--radius);padding:28px 24px;transition:.25s;display:flex;flex-direction:column}
+.serv:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:rgba(176,138,60,.5)}
+.serv svg{width:34px;height:34px;color:var(--vinho);margin-bottom:16px}
+.serv h3{font-size:1.18rem;margin-bottom:8px}
+.serv p{font-size:.92rem;color:var(--suave);flex:1}
+.serv a{margin-top:16px;font-size:.86rem;font-weight:800;color:var(--vinho);display:inline-flex;align-items:center;gap:6px}
+.serv a:hover{color:var(--ouro)}
+/* COMO FUNCIONA */
+.passos{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.passo{background:var(--card);border-radius:var(--radius);padding:28px 24px;border-top:3px solid var(--ouro)}
+.passo .num{font-family:'Fraunces',serif;font-size:2rem;color:var(--vinho);line-height:1}
+.passo h3{font-size:1.08rem;margin:12px 0 6px}
+.passo p{font-size:.92rem;color:var(--suave)}
+/* SOBRE */
+.sobre{background:var(--band);border-top:1px solid var(--linha);border-bottom:1px solid var(--linha)}
+.sobre-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.sobre .arco img{height:460px}
+.sobre h2{font-size:clamp(1.8rem,3.4vw,2.5rem);line-height:1.18;margin:14px 0 16px}
+.sobre p{margin-bottom:14px;color:var(--texto)}
+.sobre .citacao{font-family:'Fraunces',serif;font-style:italic;font-size:1.22rem;color:var(--vinho);line-height:1.5;border-left:3px solid var(--ouro);padding-left:18px;margin:22px 0}
+.creds{list-style:none;margin-top:8px}
+.creds li{display:flex;gap:11px;align-items:flex-start;padding:9px 0;border-bottom:1px solid rgba(27,42,74,.10);font-size:.95rem}
+.creds li svg{width:19px;height:19px;color:var(--ouro);flex:none;margin-top:3px}
+/* FAIXA */
+.faixa{background:var(--vinho);color:#fff;text-align:center;padding:54px 24px}
+.faixa .f1{font-size:.72rem;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:#E9C87E}
+.faixa .f2{font-family:'Fraunces',serif;font-size:clamp(1.5rem,3vw,2.1rem);margin-top:10px;line-height:1.3}
+.faixa .f2 em{font-style:italic;color:#E9C87E}
+/* FORM */
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+form{background:var(--card);border:1px solid rgba(27,42,74,.12);border-radius:var(--radius);padding:30px;box-shadow:var(--shadow)}
+form label{font-size:.82rem;font-weight:800;color:var(--grafite);display:block;margin:16px 0 6px}
+form label:first-child{margin-top:0}
+form input,form select,form textarea{width:100%;padding:13px 14px;border:1.5px solid #E3D9CF;border-radius:10px;font-family:inherit;font-size:.95rem;background:#FDFBF8;color:var(--texto)}
+form input:focus,form select:focus,form textarea:focus{outline:none;border-color:var(--vinho)}
+form .erro{border-color:#C0392B !important}
+.form-btn{width:100%;justify-content:center;margin-top:22px;border:none;cursor:pointer;font-family:inherit}
+.form-nota{font-size:.78rem;color:var(--suave);text-align:center;margin-top:12px}
+/* FAQ */
+.faq-item{background:var(--card);border:1px solid rgba(27,42,74,.10);border-radius:14px;margin-bottom:12px;overflow:hidden}
+.faq-q{width:100%;background:none;border:none;font-family:inherit;font-size:1rem;font-weight:700;color:var(--grafite);text-align:left;padding:20px 22px;cursor:pointer;display:flex;justify-content:space-between;gap:14px;align-items:center}
+.faq-q .mais{font-family:'Fraunces',serif;font-size:1.4rem;color:var(--ouro);transition:.3s;line-height:1}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.faq-a p{padding:0 22px 20px;color:var(--suave);font-size:.94rem}
+.faq-item.aberto .mais{transform:rotate(45deg)}
+/* CTA FINAL */
+.cta-final{background:var(--band);border-top:1px solid var(--linha)}
+.cta-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.cta-grid h2{font-size:clamp(1.9rem,3.6vw,2.6rem);line-height:1.18;margin:14px 0 14px}
+.cta-grid p{color:var(--suave);margin-bottom:26px;max-width:48ch}
+.cta-grid .arco img{height:420px}
+.dados{list-style:none;margin-top:26px}
+.dados li{display:flex;gap:11px;align-items:center;padding:7px 0;font-size:.95rem;color:var(--texto)}
+.dados li svg{width:19px;height:19px;color:var(--vinho);flex:none}
+/* RODAPÉ */
+footer{background:var(--grafite);color:#D9CFC8;padding:46px 0 30px;font-size:.9rem}
+.foot-grid{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap}
+footer .nome{font-family:'Fraunces',serif;font-size:1.2rem;color:#fff}
+footer a{color:#E9C87E}
+.foot-base{border-top:1px solid rgba(255,255,255,.12);margin-top:30px;padding-top:18px;font-size:.78rem;color:#A99B93;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+/* FLUTUANTE */
+.wa-float{position:fixed;right:18px;bottom:18px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px rgba(0,0,0,.25)}
+.wa-float svg{width:30px;height:30px;color:#fff}
+@media(max-width:960px){
+  .hero-grid,.dor-grid,.sobre-grid,.form-grid,.cta-grid{grid-template-columns:1fr}
+  .serv-grid,.passos{grid-template-columns:1fr 1fr}
+  .cred-1{left:6px;top:26px}
+  .cred-2{right:6px;bottom:110px}
+  .arco img{height:440px}
+  section{padding:54px 0}
+}
+@media(max-width:560px){
+  .serv-grid,.passos{grid-template-columns:1fr}
+  .header-in .btn-wa span{display:none}
+  .header-in .btn-wa{padding:11px 13px}
+  .hero{padding:38px 0 48px}
+  .arco img{height:400px}
+  .cred-card{max-width:210px;padding:10px 12px}
+}
+
+
+/* Bolos by Josina: botões grandes, catálogo, prazos */
+.btn-wa{padding:19px 34px;font-size:1.06rem;border-radius:999px}
+.btn-wa.small{padding:13px 22px;font-size:.95rem}
+.cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.prod{background:#fff;border:1px solid var(--linha);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 14px 30px rgba(74,14,28,.06)}
+.prod .foto{position:relative}
+.prod .foto img{width:100%;height:250px;object-fit:cover;display:block}
+.prod .promo{position:absolute;top:12px;left:12px;background:#71182A;color:#F3E5CE;font-size:.7rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:7px 12px;border-radius:999px}
+.prod .corpo{padding:20px 22px 24px;display:flex;flex-direction:column;flex:1}
+.prod h3{font-family:Fraunces,serif;font-size:1.3rem;line-height:1.25;margin-bottom:6px}
+.prod p{color:var(--suave);font-size:.95rem;flex:1}
+.prod .preco{font-family:Fraunces,serif;font-size:1.9rem;color:#71182A;margin:14px 0 4px}
+.prod .preco small{font-size:.85rem;color:var(--suave);font-family:Manrope,sans-serif}
+.prod .era{font-size:.85rem;color:var(--suave);text-decoration:line-through}
+.prod button{margin-top:14px;width:100%;padding:16px;border:none;border-radius:999px;background:#71182A;color:#fff;font:inherit;font-weight:800;font-size:1rem;cursor:pointer}
+.prazo-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.prazo{background:#71182A;color:#F7EDD9;border-radius:20px;padding:30px;text-align:center}
+.prazo .dias{font-family:Fraunces,serif;font-size:2.6rem;color:#C8A97E;line-height:1}
+.prazo h3{font-family:Fraunces,serif;font-size:1.35rem;margin:8px 0 6px}
+.prazo p{color:#E8DCC4;font-size:.98rem}
+.logo-card img{width:100%;border-radius:24px;display:block;box-shadow:0 30px 60px rgba(74,14,28,.18)}
+@media(max-width:900px){.cat-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.cat-grid{grid-template-columns:1fr}.prazo-grid{grid-template-columns:1fr}.prod .foto img{height:230px}}
+
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-in">
+    <a class="logo" href="#">
+      <div class="nome">Bolos by Josina</div>
+      <div class="sub">Bolos por encomenda · Odivelas e Caneças</div>
+    </a>
+    <a class="btn-wa small" href="https://wa.me/351935175637?text=Ol%C3%A1%2C%20Josina!%20Vim%20pelo%20site%20e%20quero%20fazer%20uma%20encomenda." target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2zm0 18.13a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.54-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.13-1.47-.72-1.69-.81-.22-.08-.37-.12-.53.13-.16.24-.62.76-.76.94-.14.18-.28.2-.53.07-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.28.37-.42.12-.14.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.13-.53-1.29-.74-1.78-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.43.06-.68.31-.25.24-1.05 1.02-1.05 2.55s1.07 3.01 1.23 3.22c.16.2 2.12 3.24 5.14 4.54.72.31 1.28.5 1.72.63.72.23 1.38.2 1.9.12.58-.09 1.78-.72 2.19-1.45.41-.72.41-1.34.29-1.47-.13-.12-.24-.19-.5-.32z"/></svg>
+      <span>Encomendar</span>
+    </a>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Bolos por encomenda · Odivelas e Caneças, Grande Lisboa</div>
+      <h1>Bolos bonitos e <em>deliciosos</em>, feitos por encomenda</h1>
+      <p class="subtitulo">Escolha o bolo, diga a data da festa e trate de tudo pelo WhatsApp.</p>
+      <p class="leve">Cada bolo é feito à mão pela Josina, ao seu gosto. Atendimento todos os dias, das 08h30 às 21h30.</p>
+      <a class="btn-wa" href="#encomendar">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2zm0 18.13a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.54-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.13-1.47-.72-1.69-.81-.22-.08-.37-.12-.53.13-.16.24-.62.76-.76.94-.14.18-.28.2-.53.07-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.28.37-.42.12-.14.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.13-.53-1.29-.74-1.78-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.43.06-.68.31-.25.24-1.05 1.02-1.05 2.55s1.07 3.01 1.23 3.22c.16.2 2.12 3.24 5.14 4.54.72.31 1.28.5 1.72.63.72.23 1.38.2 1.9.12.58-.09 1.78-.72 2.19-1.45.41-.72.41-1.34.29-1.47-.13-.12-.24-.19-.5-.32z"/></svg>
+        Fazer a minha encomenda
+      </a>
+      <p class="microcopy">É simples e sem compromisso. A Josina responde no WhatsApp.</p>
+      <div class="pills">
+        <span class="pill">Feitos <b>à mão</b></span>
+        <span class="pill">Desde <b>15 €</b></span>
+        <span class="pill">Até <b>45 fatias</b></span>
+        <span class="pill">Todos os dias <b>08h30 às 21h30</b></span>
+      </div>
+    </div>
+    <div class="hero-foto">
+      <div class="arco"><img src="hero.jpg" alt="Bolo de festa feito pela Josina"></div>
+      <div class="cred-card cred-1">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-7.5-4.7-9.7-9.2C.8 8.6 2.7 5.5 5.9 5c1.9-.3 3.9.6 6.1 2.6C14.2 5.6 16.2 4.7 18.1 5c3.2.5 5.1 3.6 3.6 6.8C19.5 16.3 12 21 12 21z" stroke-linejoin="round" transform="scale(0.92) translate(1,0)"/></svg>
+        <div><div class="t">Feitos à mão</div><div class="s">Um a um, ao seu gosto</div></div>
+      </div>
+      <div class="cred-card cred-2">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div><div class="t">Encomendas rápidas</div><div class="s">Simples em 5 dias</div></div>
+      </div>
+      <div class="painel">
+        <div class="nome">Bolos by Josina</div>
+        <div class="cargo">Confeitaria por encomenda</div>
+        <div class="frase">"Cada festa merece um bolo especial."</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- COMO ENCOMENDAR -->
+<section id="como">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Como encomendar</div>
+      <h2>Encomendar é <em>muito fácil</em></h2>
+      <p>São só três passos:</p>
+    </div>
+    <div class="passos">
+      <div class="passo"><div class="num">1</div><h3>Escolha o bolo</h3><p>Veja o catálogo abaixo e escolha o bolo de que mais gosta.</p></div>
+      <div class="passo"><div class="num">2</div><h3>Preencha o formulário</h3><p>Diga o seu nome, a data da festa e o que pretende. Leva menos de um minuto.</p></div>
+      <div class="passo"><div class="num">3</div><h3>Confirme no WhatsApp</h3><p>A mensagem abre pronta no WhatsApp. É só enviar e a Josina confirma tudo consigo.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CATÁLOGO -->
+<section id="catalogo" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Catálogo e preços</div>
+      <h2>Escolha o seu <em>bolo</em></h2>
+      <p>Preços claros, sem surpresas. Toque em "Encomendar este" e o formulário fica logo preenchido.</p>
+    </div>
+    <div class="cat-grid">
+      <div class="prod">
+        <div class="foto"><img src="brigadeiros.jpg" alt="Brigadeiros personalizados"></div>
+        <div class="corpo">
+          <h3>Brigadeiros personalizados</h3>
+          <p>Uma dúzia de brigadeiros feitos ao seu gosto, para a sua festa ou para oferecer.</p>
+          <div class="preco">15 € <small>por dúzia</small></div>
+          <button type="button" data-prod="Brigadeiros personalizados (15 € a dúzia)">Encomendar este</button>
+        </div>
+      </div>
+      <div class="prod">
+        <div class="foto"><img src="bento.jpg" alt="Bentô cake"></div>
+        <div class="corpo">
+          <h3>Bentô cakes</h3>
+          <p>Bolinhos pequenos com uma frase ou desenho à sua escolha. O sabor é definido pela Josina e o valor pode variar com o modelo.</p>
+          <div class="preco">20 €</div>
+          <button type="button" data-prod="Bentô cake (20 €)">Encomendar este</button>
+        </div>
+      </div>
+      <div class="prod">
+        <div class="foto"><img src="economico.jpg" alt="Bolo económico 16/16"></div>
+        <div class="corpo">
+          <h3>Bolo económico 16/16</h3>
+          <p>O bolo simples e bonito, ideal para festas pequenas e celebrações em família.</p>
+          <div class="preco">50 €</div>
+          <button type="button" data-prod="Bolo económico 16/16 (50 €)">Encomendar este</button>
+        </div>
+      </div>
+      <div class="prod">
+        <div class="foto"><span class="promo">Promoção</span><img src="ginguba.jpg" alt="Bolo de ginguba"></div>
+        <div class="corpo">
+          <h3>Bolo de ginguba</h3>
+          <p>O clássico bolo de ginguba, crocante e cheio de sabor, agora em promoção.</p>
+          <div class="era">Era 80 €</div>
+          <div class="preco">50 €</div>
+          <button type="button" data-prod="Bolo de ginguba (promoção, 50 €)">Encomendar este</button>
+        </div>
+      </div>
+      <div class="prod">
+        <div class="foto"><img src="chocolate.jpg" alt="Bolo de chocolate"></div>
+        <div class="corpo">
+          <h3>Bolos de chocolate</h3>
+          <p>Para quem adora chocolate. O preço varia com o tamanho do bolo.</p>
+          <div class="era">Era 85 €</div>
+          <div class="preco">65 €</div>
+          <button type="button" data-prod="Bolo de chocolate (desde 65 €)">Encomendar este</button>
+        </div>
+      </div>
+      <div class="prod">
+        <div class="foto"><img src="medio.jpg" alt="Bolo médio personalizado"></div>
+        <div class="corpo">
+          <h3>Bolo médio personalizado</h3>
+          <p>Tamanho 18/20 a 22/24 cm, serve 20 a 25 pessoas. Inclui 2 massas e 1 recheio à escolha, dentro dos disponíveis. O preço pode variar com o modelo.</p>
+          <div class="preco">80 €</div>
+          <button type="button" data-prod="Bolo médio personalizado (80 €)">Encomendar este</button>
+        </div>
+      </div>
+      <div class="prod">
+        <div class="foto"><img src="xl.jpg" alt="Bolo grande XL"></div>
+        <div class="corpo">
+          <h3>Bolo Grande XL</h3>
+          <p>Para festas grandes: 35 a 45 fatias. Inclui 3 massas e 2 recheios diferentes. O valor pode variar com o modelo.</p>
+          <div class="preco">170 €</div>
+          <button type="button" data-prod="Bolo Grande XL (170 €)">Encomendar este</button>
+        </div>
+      </div>
+    </div>
+    <p style="text-align:center;color:var(--suave);margin-top:22px">Não encontra o que procura? Fale com a Josina no WhatsApp. Ela faz o bolo ao seu gosto.</p>
+  </div>
+</section>
+
+<!-- PRAZOS -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Prazos</div>
+      <h2>Com quanto tempo <em>encomendar</em></h2>
+      <p>Para garantir o seu bolo, encomende com antecedência:</p>
+    </div>
+    <div class="prazo-grid">
+      <div class="prazo"><div class="dias">5 dias</div><h3>Bolos simples</h3><p>Encomende pelo menos 5 dias antes da festa.</p></div>
+      <div class="prazo"><div class="dias">10 dias</div><h3>Bolos personalizados</h3><p>Encomende pelo menos 10 dias antes da festa.</p></div>
+    </div>
+    <p style="text-align:center;color:var(--suave);margin-top:20px">Atendimento pelo WhatsApp todos os dias, das 08h30 às 21h30.</p>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section class="sobre">
+  <div class="wrap sobre-grid">
+    <div class="logo-card"><img src="logo.png" alt="Bolos by Josina"></div>
+    <div>
+      <div class="eyebrow">Sobre a Josina</div>
+      <h2>Bolos feitos com <em>dedicação</em></h2>
+      <p>A <strong>Bolos by Josina</strong> é a confeitaria por encomenda da Josina, em <strong>Odivelas e Caneças</strong>, na Grande Lisboa.</p>
+      <p>Cada bolo é feito à mão e ao gosto de quem encomenda: aniversários, celebrações em família e festas grandes. O atendimento é feito pessoalmente pela Josina, só pelo WhatsApp, para tratar de tudo consigo com calma.</p>
+      <p class="citacao">"Cada festa merece um bolo especial, feito com carinho do princípio ao fim."</p>
+      <ul class="creds">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Bolos feitos à mão, um a um</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Atendimento pessoal pelo WhatsApp</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Odivelas e Caneças, Grande Lisboa</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12.5l5 5L20 6.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Todos os dias, das 08h30 às 21h30</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- FORMULÁRIO DE ENCOMENDA -->
+<section id="encomendar">
+  <div class="wrap form-grid">
+    <div>
+      <div class="eyebrow">Faça a sua encomenda</div>
+      <h2 class="serif" style="font-size:clamp(1.8rem,3.4vw,2.5rem);line-height:1.18;margin:14px 0 12px">Preencha e <em>envie</em></h2>
+      <p style="color:var(--suave);margin-bottom:8px">Preencha os dados ao lado. Ao tocar no botão verde, a mensagem abre pronta no WhatsApp da Josina. É só enviar.</p>
+      <ul class="dados">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>Odivelas e Caneças, Grande Lisboa</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2" stroke-linecap="round" stroke-linejoin="round"/></svg>Todos os dias, das 08h30 às 21h30</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" stroke-linejoin="round"/></svg>WhatsApp: +351 935 175 637</li>
+      </ul>
+    </div>
+    <form id="formAnalise" novalidate>
+      <label for="f-nome">O seu nome *</label>
+      <input id="f-nome" type="text" placeholder="Como se chama?" autocomplete="name">
+      <label for="f-tel">O seu WhatsApp *</label>
+      <input id="f-tel" type="tel" placeholder="9XX XXX XXX" autocomplete="tel">
+      <label for="f-tipo">O que quer encomendar?</label>
+      <select id="f-tipo">
+        <option>Brigadeiros personalizados (15 € a dúzia)</option>
+        <option>Bentô cake (20 €)</option>
+        <option>Bolo económico 16/16 (50 €)</option>
+        <option>Bolo de ginguba (promoção, 50 €)</option>
+        <option>Bolo de chocolate (desde 65 €)</option>
+        <option>Bolo médio personalizado (80 €)</option>
+        <option>Bolo Grande XL (170 €)</option>
+        <option>Outro bolo / ainda não sei</option>
+      </select>
+      <label for="f-data">Data da festa</label>
+      <input id="f-data" type="date">
+      <label for="f-msg">Detalhes (tema, cores, frase, sabores)</label>
+      <textarea id="f-msg" rows="4" placeholder="Ex.: bolo de aniversário para 30 anos, tema flores, frase Parabéns Maria..."></textarea>
+      <button class="btn-wa form-btn" type="submit">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2zm0 18.13a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.54-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.13-1.47-.72-1.69-.81-.22-.08-.37-.12-.53.13-.16.24-.62.76-.76.94-.14.18-.28.2-.53.07-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.28.37-.42.12-.14.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.13-.53-1.29-.74-1.78-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.43.06-.68.31-.25.24-1.05 1.02-1.05 2.55s1.07 3.01 1.23 3.22c.16.2 2.12 3.24 5.14 4.54.72.31 1.28.5 1.72.63.72.23 1.38.2 1.9.12.58-.09 1.78-.72 2.19-1.45.41-.72.41-1.34.29-1.47-.13-.12-.24-.19-.5-.32z"/></svg>
+        Enviar encomenda pelo WhatsApp
+      </button>
+      <p class="form-nota">Ao enviar, abre o WhatsApp com a mensagem pronta. Nenhum dado fica guardado neste site.</p>
+    </form>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="padding-top:0">
+  <div class="wrap" style="max-width:820px">
+    <div class="sec-head" style="text-align:center;margin-left:auto;margin-right:auto">
+      <div class="eyebrow">Perguntas frequentes</div>
+      <h2>Dúvidas <em>comuns</em></h2>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Com quanto tempo devo encomendar?<span class="mais">+</span></button>
+      <div class="faq-a"><p>Bolos simples: pelo menos 5 dias antes. Bolos personalizados: pelo menos 10 dias antes. Assim a Josina consegue fazer o seu bolo com todo o cuidado.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Posso escolher o tema e as cores do bolo?<span class="mais">+</span></button>
+      <div class="faq-a"><p>Pode. Nos bolos personalizados, diga o tema, as cores e a frase que pretende no formulário ou no WhatsApp. Nos bentô cakes, a frase e o desenho são à sua escolha e o sabor é definido pela Josina.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Os preços são finais?<span class="mais">+</span></button>
+      <div class="faq-a"><p>Os valores do catálogo são os preços de partida. Em alguns bolos, o valor final pode variar com o modelo e o tamanho escolhidos. A Josina confirma sempre o valor consigo no WhatsApp antes de fechar a encomenda.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Onde fica a Bolos by Josina?<span class="mais">+</span></button>
+      <div class="faq-a"><p>Em Odivelas e Caneças, na Grande Lisboa. O atendimento é feito pelo WhatsApp, todos os dias, das 08h30 às 21h30.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final">
+  <div class="wrap cta-grid">
+    <div>
+      <div class="eyebrow">A sua festa merece</div>
+      <h2>Encomende hoje o seu <em>bolo</em></h2>
+      <p>Toque no botão, diga a data da festa e a Josina trata do resto consigo no WhatsApp.</p>
+      <a class="btn-wa" href="https://wa.me/351935175637?text=Ol%C3%A1%2C%20Josina!%20Vim%20pelo%20site%20e%20quero%20fazer%20uma%20encomenda." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2zm0 18.13a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.54-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.13-1.47-.72-1.69-.81-.22-.08-.37-.12-.53.13-.16.24-.62.76-.76.94-.14.18-.28.2-.53.07-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.28.37-.42.12-.14.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.13-.53-1.29-.74-1.78-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.43.06-.68.31-.25.24-1.05 1.02-1.05 2.55s1.07 3.01 1.23 3.22c.16.2 2.12 3.24 5.14 4.54.72.31 1.28.5 1.72.63.72.23 1.38.2 1.9.12.58-.09 1.78-.72 2.19-1.45.41-.72.41-1.34.29-1.47-.13-.12-.24-.19-.5-.32z"/></svg>
+        Falar com a Josina
+      </a>
+      <p class="microcopy">Todos os dias, das 08h30 às 21h30 · Odivelas e Caneças</p>
+    </div>
+    <div class="arco"><img src="medio.jpg" alt="Bolo personalizado da Josina"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="nome">Bolos by Josina</div>
+        <div style="font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ouro);font-weight:800;margin:2px 0 10px">Bolos por encomenda</div>
+        <div>Cada festa merece um bolo especial.</div>
+      </div>
+      <div>
+        <div>Odivelas e Caneças, Grande Lisboa</div>
+        <div>Atendimento todos os dias, das 08h30 às 21h30</div>
+      </div>
+      <div>
+        <div>WhatsApp: <a href="https://wa.me/351935175637" target="_blank" rel="noopener">+351 935 175 637</a></div>
+        <div>Instagram: <a href="https://www.instagram.com/bolos_by_josina" target="_blank" rel="noopener">@bolos_by_josina</a></div>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>© 2026 Bolos by Josina. Todos os direitos reservados.</span>
+      <span>Encomendas com 5 a 10 dias de antecedência.</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/351935175637?text=Ol%C3%A1%2C%20Josina!%20Vim%20pelo%20site%20e%20quero%20fazer%20uma%20encomenda." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.9-4.45 9.9-9.91C21.95 6.45 17.5 2 12.04 2zm0 18.13a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.54-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.13-1.47-.72-1.69-.81-.22-.08-.37-.12-.53.13-.16.24-.62.76-.76.94-.14.18-.28.2-.53.07-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.28.37-.42.12-.14.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.13-.53-1.29-.74-1.78-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.43.06-.68.31-.25.24-1.05 1.02-1.05 2.55s1.07 3.01 1.23 3.22c.16.2 2.12 3.24 5.14 4.54.72.31 1.28.5 1.72.63.72.23 1.38.2 1.9.12.58-.09 1.78-.72 2.19-1.45.41-.72.41-1.34.29-1.47-.13-.12-.24-.19-.5-.32z"/></svg>
+</a>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var item=btn.parentElement, ans=item.querySelector('.faq-a'), aberto=item.classList.contains('aberto');
+    document.querySelectorAll('.faq-item.aberto').forEach(function(i){i.classList.remove('aberto');i.querySelector('.faq-a').style.maxHeight=null;});
+    if(!aberto){item.classList.add('aberto');ans.style.maxHeight=ans.scrollHeight+'px';}
+  });
+});
+document.querySelectorAll('[data-prod]').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var sel=document.getElementById('f-tipo'), alvo=btn.getAttribute('data-prod');
+    for(var i=0;i<sel.options.length;i++){
+      if(alvo.indexOf(sel.options[i].text.split(' (')[0])===0 || sel.options[i].text===alvo){ sel.selectedIndex=i; break; }
+    }
+    document.getElementById('encomendar').scrollIntoView({behavior:'smooth'});
+  });
+});
+document.getElementById('formAnalise').addEventListener('submit',function(e){
+  e.preventDefault();
+  var nome=document.getElementById('f-nome'), tel=document.getElementById('f-tel'),
+      tipo=document.getElementById('f-tipo').value, data=document.getElementById('f-data').value,
+      msg=document.getElementById('f-msg').value.trim(), ok=true;
+  [nome,tel].forEach(function(c){c.classList.remove('erro');});
+  if(!nome.value.trim()){nome.classList.add('erro');ok=false;}
+  if(!tel.value.trim()){tel.classList.add('erro');ok=false;}
+  if(!ok)return;
+  var dataTxt='';
+  if(data){ var p=data.split('-'); dataTxt=p[2]+'/'+p[1]+'/'+p[0]; }
+  var texto='Olá, Josina! O meu nome é '+nome.value.trim()+'. Quero encomendar: '+tipo+'.'+(dataTxt?' Data da festa: '+dataTxt+'.':'')+(msg?' Detalhes: '+msg:'')+' (O meu WhatsApp: '+tel.value.trim()+')';
+  window.open('https://wa.me/351935175637?text='+encodeURIComponent(texto),'_blank');
+});
+</script>
+</body>
+</html>
